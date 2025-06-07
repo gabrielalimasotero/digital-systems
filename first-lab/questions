@@ -1,0 +1,17 @@
+## Summary of the Questions
+
+This folder contains my solutions for the first lab of the Digital Systems 2 course (ME587) at UFPE. The exercises explore basic low-level ARM Assembly programming using the Visual2 simulator.
+
+1️⃣ **Immediate values and memory access**: Load immediate values `{0x12, 0x12AB, 0x12AB34, 0x12AB34CD}` into registers R0 to R3, respectively; store them into memory at addresses `0x100` to `0x10C`; finally, load them back into registers R8 to R11.
+
+2️⃣ **Loops**: Calculate the first 30 terms of the Fibonacci sequence using a loop and store them in memory, starting from `F(0)=1` and `F(1)=1`, with the recurrence `F(n)=F(n-1)+F(n-2)`.
+
+3️⃣ **Overflow analysis**: For the Fibonacci code in Question 2, determine up to which term it can be computed without result overflow.
+
+4️⃣ **Low-level multiplication**: Implement multiplication of two numbers in Assembly and store the result in memory.
+
+5️⃣ **Code reuse for factorial**: Reuse the multiplication code from Question 4 to calculate the factorial of a number and store the result.
+
+6️⃣ **Euclidean division**: Implement an algorithm to compute the quotient and remainder of Euclidean division between two numbers and store the results.
+
+7️⃣ **Euclidean algorithm for GCD**: Implement the Euclidean algorithm to compute the greatest common divisor (GCD) of two integers `m` and `n` (`0 ≤ n < m`) and store the result in memory.

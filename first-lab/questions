@@ -4,7 +4,7 @@ This folder contains my solutions for the first lab of the Digital Systems 2 cou
 
 1️⃣ **Immediate values and memory access**: Load immediate values `{0x12, 0x12AB, 0x12AB34, 0x12AB34CD}` into registers R0 to R3, respectively; store them into memory at addresses `0x100` to `0x10C`; finally, load them back into registers R8 to R11.
 
-2️⃣ **Loops**: Calculate the first 30 terms of the Fibonacci sequence using a loop and store them in memory, starting from `F(0)=1` and `F(1)=1`, with the recurrence `F(n)=F(n-1)+F(n-2)`.
+2️⃣ **Loops**: Calculate the first 50 terms of the Fibonacci sequence using a loop and store them in memory, starting from `F(0)=1` and `F(1)=1`, with the recurrence `F(n)=F(n-1)+F(n-2)`.
 
 3️⃣ **Overflow analysis**: For the Fibonacci code in Question 2, determine up to which term it can be computed without result overflow.
 

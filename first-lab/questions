@@ -1,19 +1,21 @@
-## Summary of the Questions
+This folder contains my solutions for the first lab of the Digital Systems 2 course (ME587) at UFPE.
+The exercises focus on basic low-level ARM Assembly programming using the Visual2 simulator.
 
-This folder contains my solutions for the first lab of the Digital Systems 2 course (ME587) at UFPE. The exercises explore basic low-level ARM Assembly programming using the Visual2 simulator.
+1️⃣ Immediate values and memory: Load immediate values (0x12, 0x12AB, 0x12AB34, 0x12AB34CD) into R0–R3, store them at addresses 0x100–0x10C, and read them back into R8–R11.
 
-1️⃣ **Immediate values and memory access**: Load immediate values `{0x12, 0x12AB, 0x12AB34, 0x12AB34CD}` into registers R0 to R3, respectively; store them into memory at addresses `0x100` to `0x10C`; finally, load them back into registers R8 to R11.
+2️⃣ Loops and Fibonacci: Use a loop to calculate and store the first 50 Fibonacci terms (F(0)=1, F(1)=1, F(n)=F(n-1)+F(n-2)).
 
-2️⃣ **Loops**: Calculate the first 50 terms of the Fibonacci sequence using a loop and store them in memory, starting from `F(0)=1` and `F(1)=1`, with the recurrence `F(n)=F(n-1)+F(n-2)`.
+3️⃣ Overflow analysis:
+A 32-bit register can store values up to 0xFFFFFFFF (2³² - 1, or 4.2 billion, unsigned).
+The sequence starts at index 0 with the first term as 1.
+The 47th term (at index 46) is the first to appear negative in signed view, though its binary bits remain correct.
+The 48th term (at index 47) exceeds the 32-bit maximum (4,294,967,295), causing real overflow: the binary bits no longer represent the true Fibonacci number.
+Thus, in 32-bit registers, the Fibonacci sequence breaks at index 47 (the 48th term).
 
-3️⃣ **Overflow analysis**: For the Fibonacci code in Question 2, determine up to which term it can be computed without result overflow.
+4️⃣ Low-level multiplication: Implement multiplication of two numbers in Assembly, storing the result in memory.
 
-Although a 32-bit register can store up to 4,294,967,295 (in binary), it doesn’t care whether this is a signed or unsigned number—it’s just 32 bits of data. The real difference comes from how the CPU’s instructions interpret those bits: for unsigned, you see the full positive range up to 4.2 billion, but for signed, the highest “positive” number is only 2.1 billion (because one bit is reserved for the sign). That’s why F(48), even though it’s technically stored correctly (unsigned), appears negative in signed view. Only at F(49) do we run out of binary “room” entirely, causing the real overflow—bits that don’t fit anymore, breaking the Fibonacci sequence.
+5️⃣ Code reuse for factorial: Reuse the multiplication code to calculate factorials.
 
-4️⃣ **Low-level multiplication**: Implement multiplication of two numbers in Assembly and store the result in memory.
+6️⃣ Euclidean division: Calculate the quotient and remainder of integer division.
 
-5️⃣ **Code reuse for factorial**: Reuse the multiplication code from Question 4 to calculate the factorial of a number and store the result.
-
-6️⃣ **Euclidean division**: Implement an algorithm to compute the quotient and remainder of Euclidean division between two numbers and store the results.
-
-7️⃣ **Euclidean algorithm for GCD**: Implement the Euclidean algorithm to compute the greatest common divisor (GCD) of two integers `m` and `n` (`0 ≤ n < m`) and store the result in memory.
+7️⃣ Euclidean GCD algorithm: Use the Euclidean algorithm to compute the greatest common divisor (GCD) of two integers (0 ≤ n < m).

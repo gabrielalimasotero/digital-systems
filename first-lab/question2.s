@@ -37,4 +37,4 @@ TWO
             STR     R1, [R4], #4 ; F(1) = 1
 
 DONE        
-            MOV     R7, #0 ; Marca fim
+            MOV     R7, #0

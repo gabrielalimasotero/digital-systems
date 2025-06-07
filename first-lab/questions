@@ -8,6 +8,8 @@ This folder contains my solutions for the first lab of the Digital Systems 2 cou
 
 3️⃣ **Overflow analysis**: For the Fibonacci code in Question 2, determine up to which term it can be computed without result overflow.
 
+Although a 32-bit register can store up to 4,294,967,295 (in binary), it doesn’t care whether this is a signed or unsigned number—it’s just 32 bits of data. The real difference comes from how the CPU’s instructions interpret those bits: for unsigned, you see the full positive range up to 4.2 billion, but for signed, the highest “positive” number is only 2.1 billion (because one bit is reserved for the sign). That’s why F(48), even though it’s technically stored correctly (unsigned), appears negative in signed view. Only at F(49) do we run out of binary “room” entirely, causing the real overflow—bits that don’t fit anymore, breaking the Fibonacci sequence.
+
 4️⃣ **Low-level multiplication**: Implement multiplication of two numbers in Assembly and store the result in memory.
 
 5️⃣ **Code reuse for factorial**: Reuse the multiplication code from Question 4 to calculate the factorial of a number and store the result.

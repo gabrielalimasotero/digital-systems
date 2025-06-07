@@ -5,10 +5,10 @@
 
             ;       edge cases
             CMP     R5, #0 ; 0 terms
-            BEQ     DONE
+            BEQ     FINAL
 
             CMP     R5, #1 ; 1 term
-            BEQ     ONE
+            BEQ     FINAL
 
             CMP     R5, #2 ; Se pediu 2 termos
             BEQ     TWO
@@ -26,15 +26,15 @@ LOOP
 
             SUBS    R5, R5, #1 ; counter--
             BNE     LOOP ; while r5 > 0
-            B       DONE ; z flag = 1
+            B       FINAL ; z flag = 1
 
 ONE    
             STR     R0, [R4], #4 ; F(0) = 1
-            B       DONE
+            B       FINAL
 
 TWO 
             STR     R0, [R4], #4 ; F(0) = 1
             STR     R1, [R4], #4 ; F(1) = 1
 
-DONE        
+FINAL        
             MOV     R7, #0

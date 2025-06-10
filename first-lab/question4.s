@@ -1,6 +1,6 @@
               ;       calculate multiplication between two integers
               ;       saves result in data memory
-              ;       Russian peasant” or “binary multiplication”
+              ;       "Russian peasant” or “binary multiplication”
 
               ;       choose input numbers
               MOV     R0, #15

@@ -1,2 +1,1 @@
-# low-level-arm-labs
-Low-level ARM assembly labs and exercises for the Digital Systems course at UFPE.
+Exercises for the Digital Systems 2 course at UFPE.
